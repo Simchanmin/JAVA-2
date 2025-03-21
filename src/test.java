@@ -1,8 +1,16 @@
-public class test {
+import java.util.Scanner;
+
+public class Test {
     public static void main(String[] args) {
-        int npmt1 = 1;
-        int npmt2 = 3;
-        int npmt3 = npmt1 + npmt2;
-        System.out.println(npmt3);
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        int answer = 0;
+        
+        while(number > 0){
+            answer += number % 100;
+            number /= 100;
+        }
+
+        System.out.println(answer);
     }
 }
