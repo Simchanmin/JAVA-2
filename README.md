@@ -1,18 +1,38 @@
-## Getting Started
+# 3/21
+#### 불필요 파일 제거
+#### 간단한 변수 활용(test.java)
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
 
-## Folder Structure
 
-The workspace contains two folders by default, where:
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+# 3/20
+#### VScode에서 자바 프로젝트 생성 방법   
+#### git 연동 
+#### 변수 이름은 정수 n- 실수 f- bool b-
+----
+-
+*
+<!---마크다운 코드블럭 처리법--->
+~~~
+public class test {
+    public static void main(String[] args) {
+        int npmt1 = 1;
+        int npmt2 = 3;
+        int npmt3 = npmt1 + npmt2;
+        System.out.println(npmt3);
+    }
+}
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+~~~
 
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```
+public class test {
+    public static void main(String[] args) {
+        int npmt1 = 1;
+        int npmt2 = 3;
+        int npmt3 = npmt1 + npmt2;
+        System.out.println(npmt3);
+    }
+}
+```
