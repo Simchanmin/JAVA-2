@@ -1,3 +1,96 @@
+# 4/3
+## 2차원 배열
+- 앞이 행, 뒤쪽이 열
+```
+int[][] array2 = new int[3][3]; //3*3 배열 설정
+
+int[][] array2 = { //초기값 바로 설정
+    {1, 2, 3},
+    {4, 5, 6},
+    {7, 8, 9}
+};
+
+int[][] array2 = new int[3][]; //행만 설정하고 열은 나중에 설정
+array2[0] = new int[2];
+array2[1] = new int[3];
+array2[2] = new int[4];
+
+int[] row1 = {1, 2, 3}; //1차원 배열을 두개 참조하여 2차원 배열을 만듦
+int[] row2 = {4, 5, 6};
+int[][] array2 = {row1, row2};
+
+Array2.length / Array2[i].length //첫 행의 길이와 i번째 행의 길이
+```
+## 1차원 배열
+- 인덱스와 인덱스에 대응하는 데이터들로 이루어진 자료구조 한번에 많은 공간 선언
+- 반복문으로 관리하기 적합함
+- 인덱스는 0번으로 시작
+```
+int[] numbers = new int[5]; // 크기가 5인 int 배열 선언
+
+int[] numbers = {10, 20, 30, 40, 50}; // 초기값 설정
+
+int[] numbers;
+numbers = new int[3]; // 크기를 나중에 정의
+
+numbers[2] = 3; //인덱스가 2인 공간에 3대입
+
+int[] numbers = new int[5];
+int[] Mynumbers = numbers; //같은 공간을 공유하는 다른 배열 생성
+
+int[] intarray = new int[5];
+int size = intarray.length; //배열의 크기를 size에 저장
+```
+## 반복문
+### for - each
+int [] n = {1,2,3,4,5};
+int sum = 0;
+for(int k : n){ //배열의 0번째 인덱스부터 끝까지 k에 대입입
+    sum += k;
+};
+### continue / break
+- 각각 반복문을 진행 / 중지시키기 위해 사용용
+### 중첩반복문
+```
+for (int i = 2; i <= 9; i++) {
+            System.out.println(i + "단:");
+            for (int j = 1; j <= 9; j++) {
+                System.out.println(i + " x " + j + " = " + (i * j));
+            } //여기서 j값 초기화 된 뒤 첫 for문으로 돌아감
+            System.out.println();
+        }
+```
+### do-while
+```
+char a = 'a';
+do {
+        System.out.println(a);
+        a = (char) (a+1);
+    } while (a == 'z');
+//코드가 일단 한번은 실행됨
+//아스키 코드값 참조해서 출력력
+
+```
+### while
+```
+while(int i = 10 > 0){ //i가 0보다 클 동안 
+           System.out.println(i); 
+           i--
+        }
+
+```
+### for
+```
+for (초기문; 조건식; 반복 후 작업){
+    작업문
+};
+
+for(int i = 0; i<10; i++){
+    System.out.println(i);
+};
+```
+
+
 # 3/27
 ### 연산자
 ```
