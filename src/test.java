@@ -10,7 +10,7 @@ public class Test {
             answer += number % 100;
             number /= 100;
         }
-
+        
         System.out.println(answer);
     }
 }

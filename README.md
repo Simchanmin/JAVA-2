@@ -1,12 +1,67 @@
 # 4/10
+## 생성자
+- 객체가 생성되는 순간에 자동으로 호출됨
+- 객체가 생성될때 초기화 목적으로 실행됨
+- 리턴타입을 지정하지 않음
+```
+class Person{
+    String name;
+    int age;
+}
+    Person(String name, int age){ //매개변수가 있는 생성자
+        this.name = name;
+        this.age = age;
+    }
+    Person(){ //매개변수가 없는 생성자(초기화)
+        this.name = "???";
+        this.age = 0;
+    }
+    void info(){
+        System.out.println(name + "" + age); //출력 메서드
+    }
+public class Constructor{
+    public static void main(String[] args){
+        Person person1 = new Person("sim",23);
+        Person person2 = Person();
+        person1.info();
+        person2.info();
+    }
+}
+```
+## 절차지향 언어
+- 작업 순서를 표현하는 컴퓨터 명령 집함
+- 함수들의 집합으로 프로그램 작성
+## 객체지향 언어
+- 컴퓨터가 수행하는 작업을 객체들 간의 상호 작용으로 표현
+- 클래스 혹은 객체들의 집합으로 프로그램 작성
+```
+public class Class1 {
+    public static void main(String[] args) {
+        Car MyCar = new Car(); //클래스로 객체 생성
+        MyCar.brand = "Toyota"; //값 넣어주기
+        MyCar.speed = 120;
+        MyCar.drive(); //함수(메서드) 실행
+    }
+}
+class Car{
+    String brand; //가진 특성들
+    int speed;
+    void drive(){ //객체가 가질 함수
+        System.out.println(brand + "가" + speed + "Km/h로 달림");
+    }
+}
+```
 ## 객체지향언어의 목적
 - 실세계에 대한 쉬운 모델링
 - 실세계에서 발생한 일을 프로그래밍
 - 현실에선 절차나 과정보다 물체(객체) 간의 상호 작용으로 묘사하는것이 용이함
 ## 클래스와 객체
-- 클래스 : 객체의 틀로서 객체를 생성하기 위한 구조를 정의함
-- 객체 : 클래스를 기반으로 설계된 실체 
-클래스에서 정의된 데이터와 메서드(동작)을 가짐
+- 클래스 : 객체의 틀로서 객체를 생성하기 위한 구조를 정의함  
+public Class Circle  
+//전역 //선언 //이름
+- 객체 : 클래스를 기반으로 설계된 실체  
+클래스에서 정의된 데이터와 메서드(동작)을 가짐  
+인스턴스라고도 불림
 
 ## try - catch 
 - 예외 확률이 있는 코드가 예외 발생 시 다른 코드를 실행하게 함
