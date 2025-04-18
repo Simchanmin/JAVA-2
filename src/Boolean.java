@@ -5,6 +5,7 @@ public class Boolean {
         
         Scanner sc = new Scanner(System.in);
         int score = sc.nextInt();
+        System.out.println("100 이하 정수입니다.");
         boolean b1 = true;
         boolean b2 = false;
         boolean b3 = true;
@@ -12,7 +13,7 @@ public class Boolean {
         System.out.println(b1 && b3);
         System.out.println(b1 || b2);
         System.out.println(!b1);
-
+ 
         if(score <= 100 && score>=0){{
             System.out.println("100 이하 정수입니다.");
         }}

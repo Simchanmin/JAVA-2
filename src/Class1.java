@@ -12,7 +12,7 @@ public class Class1 {
 
 class Car {
     String brand;
-    int speed;
+    int speed; 
 
     void drive() {
         System.out.println(brand + "가 " + speed + "Km/h로 달림");

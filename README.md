@@ -1,5 +1,79 @@
 # 202230118 심찬민
+# 4/18
+## instanceof 
+- 
+```java
+if (cl instanceof Sub) {  
+    // cl 객체가 Sub 클래스의 인스턴스라면 다운캐스팅을 수행
+    Sub s1 = (Sub) cl;  
+    // 자식 클래스에서 오버라이딩된 메서드 호출
+    s1.mine();
+    // 자식 클래스에만 정의된 메서드 호출
+    s1.mine2();
+    
+} else {  
+    System.out.println("다운캐스팅 불가");  
+}
+```
+## 다운캐스팅 개념
+- 업캐스팅 된 슈퍼 타입의 객체를 다시 서브 타입의 객체로 변환시킴 
+- 타입도 햇갈리고 남용하면 안정성이 떨어짐
+## 업캐스팅 개념
+- 하위 클래스의 레퍼런스는 상위 클래스를 가리킬 수 없지만, 상위 클래스의 레퍼런스는 하위 클래스를 가리킬 수 있음
+- 오버라이딩 된 메서드는 출력이 가능하지만 자식의 고유 메서드는 출력 불가
+```java
+class Class {
+    void mine() {
+        System.out.println("난 슈퍼 메서드");
+    }
+}
 
+class Sub extends Class {
+    void mine() {
+        System.out.println("난 서브 메서드");
+    }
+    void mine2(){
+        System.out.println("난 출력불가 메서드");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Class cl = new Sub(); // 업캐스팅
+        Sub s1 = (Sub); // 다운캐스팅
+        s1.mine(); // 출력값은 서브 메서드 
+        s1.mine2(); // 다운캐스팅으로 인해 출력 가능
+}
+}
+```
+## 상속의 특징
+- 하나의 클래스가 둘 이상의 부모 클래스를 동시에 상속받지 못함(다중 상속 금지)
+- C++는 다중 상속이 가능하여 멤버가 중복 생성되는 문제가 있음
+## 상속
+- 부모 클래스의 기능을 상속받은 자식 클래스를 확장.
+- 각각 슈퍼 클래스 / 서브 클래스
+- 자식 클래스는 부모 클래스의 메서드 사용 및 자신만의 메서드 추가 가능
+```java
+    class Parent { //슈퍼 클래스
+}
+class Child extends Parent { //서브 클래스
+}
+```
+## super 키워드
+- 서브 클래스에서 슈퍼 클래스의 메서드를 활용하기 위함
+```java
+class Class {
+    void age() {
+        System.out.println("23");
+    }
+}
+
+class Student extends Class {  
+    void eat() {
+        super.age();  // 부모 클래스 메서드 호출  
+    }
+}
+```
 # 4/17
 ## static
 - 정적으로 다른 클래스에서 사용 가능
