@@ -17,7 +17,7 @@ class Array extends Point {
         
     }
 }
-
+ 
 public class Constructor5 {
     public static void main(String[] args) {
         Array ar = new Array();
