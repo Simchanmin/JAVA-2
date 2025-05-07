@@ -1,7 +1,7 @@
-class Circle {
+class MyCircle {
     int radius;
 
-    public Circle(int radius) {
+    public MyCircle(int radius) { // 클래스명 변경
         this.radius = radius;
     }
 
@@ -11,10 +11,10 @@ class Circle {
 }
 
 class Shape {
-    Circle circle; // Circle 객체를 인스턴스 변수로 포함
+    MyCircle circle; // 클래스명 변경
 
-    public Shape(Circle circle) {
-        this.circle = circle; // Circle 객체를 초기화
+    public Shape(MyCircle circle) { // 클래스명 변경
+        this.circle = circle; // MyCircle 객체를 초기화
     }
 
     public void printShapeInfo() {
@@ -25,8 +25,8 @@ class Shape {
 
 public class Consturctor4 {
     public static void main(String[] args) {
-        Circle circle = new Circle(5); // 반지름 5인 Circle 객체 생성
-        Shape shape = new Shape(circle); // Circle 객체를 Shape 객체로 전달
-        shape.printShapeInfo(); // Shape 객체에서 Circle 정보 출력
+        MyCircle circle = new MyCircle(5); // 클래스명 변경
+        Shape shape = new Shape(circle); // MyCircle 객체를 Shape 객체로 전달
+        shape.printShapeInfo(); // Shape 객체에서 MyCircle 정보 출력
     }
 }

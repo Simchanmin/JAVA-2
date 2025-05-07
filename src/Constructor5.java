@@ -11,16 +11,16 @@ class Point{
 }
 
 
-class Array extends Point {
+class MyArray extends Point {
     
-    Array(){
+    MyArray(){
         
     }
 }
  
 public class Constructor5 {
     public static void main(String[] args) {
-        Array ar = new Array();
+        MyArray ar = new MyArray();
         ar.set(3,6);
         ar.print();
     }
