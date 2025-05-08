@@ -1,4 +1,57 @@
 # 202230118 심찬민
+# 5/8(abt 참조)
+## 패키지
+- 서로 관련된 클래스, 인터페이스, 클래스 파일들을 묶어놓은 디렉터리
+- 하나의 프로그램은 한 개 이상의 패키지로 작성
+- jar 파일로 압축 가능
+## 모듈
+- 관련된 여러 패지키와 이미지 등의 자원을 모아 놓음
+- 하나의 모듈을 하나의 .jmod파일에 저장
+## 인터페이스
+- 다중 상속이 허용된 클래스 느낌?
+- interface 키워드를 사용하여 선언
+- implements 키워드를 사용하여 클래스에서 인터페이스를 구현
+- 기본적으로 추상 메서드를 가짐
+```java
+interface Animal {
+    void Sound(); 
+}
+class Dog implements Animal { 
+    @Override
+    public void Sound() {
+        System.out.println("멍멍!");
+    }
+}
+class Cat implements Animal { //인터페이스라 다중 상속이 가능함
+    @Override
+    public void Sound() {
+        System.out.println("야옹!");
+    }
+}
+
+```
+- 인스턴스(객체) : 실제 메모리에 할당된 객체
+- 레퍼런스 : 객체를 가리키는 변수(주소 저장)
+```java
+Name  myName = new name(); // Dog 클래스의 인스턴스 생성
+Name yourName = myName; // 레퍼런스 변수 anotherDog가 myDog 인스턴스를 가리킴
+```
+## 추상 클래스 
+- abstract 키워드를 사용하여 선언
+- 객체를 생성할 수 없고 상속받고 오버라이딩하면 메서드 사용가능
+- 메서드에 매개변수는 들어갈 수 있음
+```java
+abstract class Name{ //추상 클래스
+    abstract public String getName(); //추상 메서드
+}
+
+class Myname extends Name{
+    @Override
+    void say(){
+        System.out.println("Hello"); //상속받고 오버라이딩 해주면 사용가능
+    }
+}
+```
 # 4/18
 ## instanceof 
 - 
@@ -75,6 +128,8 @@ class Student extends Class {
 }
 ```
 # 4/17
+
+
 ## static
 - 정적으로 다른 클래스에서 사용 가능
 ```java
@@ -191,7 +246,6 @@ Car Mycar = new Car(); // 변수나 객체나 같은 형태이다
 ```
 #### this 레퍼런스
 - 객체 자신의 레퍼런스
-
 # 4/10
 ## 생성자
 - 객체가 생성되는 순간에 자동으로 호출됨
