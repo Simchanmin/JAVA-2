@@ -1,5 +1,84 @@
 # 202230118 심찬민
-# 5/8(abt 참조)
+# 5/15
+## 박싱, 언박싱
+- 박싱 : 기본 타입의 값을 wrapper 객체로 변환
+- 언박싱 : 박싱의 반댓말, wrapper객체를 다시 기본 타입으로 변환
+## wrapper클래스
+- 기본형 변수를 객체로 만들어줌
+- 자바에서 기본형은 객체가 아니기 때문에 arraylist등에 데이터를 담을 수 없기에 사용
+## ==, equals()
+- ==는 주소가 같은지, equals는 값이 같은지 비교
+```java
+class nPoint{
+    int x, y;
+    public nPoint(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+    public boolean equals(Object obj) {
+       nPoint p = (nPoint)obj;
+       if(x == p.x && y == p.y) {
+           return true;
+    }else {
+           return false;
+       }
+    }
+
+}
+public class nEquals {
+    public static void main(String[] args) {
+        point p1 = new point(2, 3);
+        point p2 = new point(2, 3);
+        point p3 = new point(3, 4);
+        if(p1 == p2) {
+            System.out.println("p1과 p2는 같다."); //주소가 같아 true
+        }
+        if(p1.equals(p2)) {
+            System.out.println("p1과 p2는 같다."); //주소가 같아 true
+        }
+        if(p1.equals(p3)) {
+            System.out.println("p1과 p3는 같다."); //값이 달라 false
+        }
+    }
+}
+
+```
+## 클래스 이름 등 출력 방법
+```java
+class point {
+    private int x, y;
+
+    public point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+
+public class object1 {
+    public static void main(String[] args) {
+        point p = new point(2, 3);
+        System.out.println(p.getClass().getName()); // 클래스 이름 출력
+        System.out.println(p.hashCode());          // 해시코드 출력
+        System.out.println(p.toString());          // 객체 정보 출력
+    }
+}
+```
+## 자바 플랫폼
+- 자바의 개발 환경(jdk)과 실행 환경(jre)을 지칭
+- 자바 API의 모든 클래스가 여러 개의 모듈로 재구성됨
+- 모듈 파일로부터 모듈을 푸는 명령: jmod extract로 사용 
+## 모듈
+- 패지키 or 패키지들과 필요한 리소스(이미지, 영상 등)를 라이브러리 형태로 모아둔 컨테이너
+- 자바 모듈화의 목적: 자바 컴포넌트들을 필요에 따라 조립하여 사용하기 위함
+- 컴퓨터 시스템의 불필요한 부담 감소
+## 여담
+- 가상머신에서는 맥, 윈도우보다 리눅스가 월등하다
+- 대신 개발 외의 작업에서는 리눅스가 좀 떨어짐
+## 패키지2
+- 필요한 기능들을 모아둔 것이 패키지, 패키지를 모아둔 게 모드
+- 패키지 이름은 도메인을 기반으로(com.회사이름.프로젝트명.기능명)
+
+# 5/8(abt.java 참조)
 ## 패키지
 - 서로 관련된 클래스, 인터페이스, 클래스 파일들을 묶어놓은 디렉터리
 - 하나의 프로그램은 한 개 이상의 패키지로 작성
